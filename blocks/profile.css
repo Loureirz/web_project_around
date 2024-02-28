@@ -1,0 +1,71 @@
+.main {
+  padding: 40px 200px 0 200px;
+}
+
+.profile {
+  max-width: 880px;
+  max-height: 120px;
+  display: flex;
+}
+
+.profile__image {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 100px;
+}
+
+.profile__info {
+  max-width: 415px;
+  max-height: 77px;
+  padding: 22px 190px 22px 30px;
+  display: grid;
+  grid-template-columns: 373px 24px;
+}
+
+.profile__info-name {
+  color: #fff;
+  font-size: 38px;
+  margin: 0;
+  max-width: 373px;
+  font-family: "Inter";
+}
+
+.profile__info-text {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  font-family: "Inter";
+  padding: 16px 0 0 0;
+}
+
+.profile__info-button {
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  border: 1px solid #fff;
+  margin: 12px 0 0 0;
+  cursor: pointer;
+}
+
+.profile__info-button:hover {
+  opacity: 60%;
+  transition: 0.4s;
+}
+
+.profile__button {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  border: 2px solid #fff;
+  margin-top: 30px;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.profile__button:hover {
+  opacity: 60%;
+  transition: 0.4s;
+}
+
+.profile__button-add {
+}

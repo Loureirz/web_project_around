@@ -1,0 +1,14 @@
+.header {
+  max-width: 880px;
+  padding: 45px 200px 0 200px;
+}
+
+.header__logo {
+  border-bottom: 1px solid gray;
+}
+
+.header__logo-image {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 41px;
+}

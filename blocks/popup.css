@@ -1,0 +1,54 @@
+.popup {
+  /*display: none;*/
+  position: absolute;
+}
+
+.popup__container {
+  position: fixed;
+  width: 282px;
+  height: 322px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.form__close {
+  border: none;
+  background: transparent;
+  background-image: url(/images/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 26px;
+  height: 26px;
+  margin-left: 260px;
+}
+
+.form__title {
+  font-family: "Inter Black";
+  font-size: 18px;
+  padding: 25px 22px 0 22px;
+  margin: 0;
+}
+
+.form__name-input {
+  margin: 76px 22px 0 22px;
+  width: 230px;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.form__about-input {
+  margin: 30px 22px 0 22px;
+  width: 230px;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.form__submit {
+  width: 238px;
+  height: 46px;
+  background-color: #000;
+  color: #fff;
+  margin: 46px 22px 25px 22px;
+  border-radius: 2px;
+}
