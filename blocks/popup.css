@@ -1,54 +1,58 @@
-.popup {
+.container {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 160px;
+  left: 425px;
   /*display: none;*/
-  position: absolute;
+}
+
+.container__close {
+  background: transparent;
+  border: none;
+  left: 430px;
 }
 
 .popup__container {
-  position: fixed;
-  width: 282px;
-  height: 322px;
+  width: 430px;
+  height: 330px;
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 10px;
 }
 
-.form__close {
-  border: none;
-  background: transparent;
-  background-image: url(/images/close.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 26px;
-  height: 26px;
-  margin-left: 260px;
-}
-
 .form__title {
   font-family: "Inter Black";
-  font-size: 18px;
-  padding: 25px 22px 0 22px;
+  font-size: 24px;
+  padding: 34px 64px 0 36px;
   margin: 0;
 }
 
 .form__name-input {
-  margin: 76px 22px 0 22px;
-  width: 230px;
+  margin: 56px 36px 0 36px;
+  width: 358px;
   border: none;
   border-bottom: 1px solid #000;
 }
 
 .form__about-input {
-  margin: 30px 22px 0 22px;
-  width: 230px;
+  margin: 30px 36px 0 36px;
+  width: 358px;
   border: none;
   border-bottom: 1px solid #000;
 }
 
 .form__submit {
-  width: 238px;
+  width: 358px;
   height: 46px;
   background-color: #000;
   color: #fff;
-  margin: 46px 22px 25px 22px;
+  margin: 48px 36px 37px 36px;
   border-radius: 2px;
+  cursor: pointer;
+}
+
+.form__submit:hover {
+  opacity: 80%;
+  transition: 0.4s;
+  cursor: pointer;
 }

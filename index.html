@@ -23,17 +23,20 @@
                   <img src="/images/vector.svg" alt="Button Image" class="profile__info-button-image">
                 </button>
                 <p class="profile__info-text">Explorador</p>
-                <div class="popup">
-                  <input type="button" value="" class="form__close">
-                  <div>
-                  <form class="popup__container">
+
+                <div class="container">
+                  <button class="container__close"><img src="/images/close.svg" alt="" class=""></button>
+                  <div class="popup">
+                  <div class="popup__container">
                     <h2 class="form__title">Editar Perfil</h2>
-                    <input type="text" class="form__name-input" placeholder="Nome" required>
-                    <input type="text" class="form__about-input" placeholder="Sobre mim" required>
-                    <input type="submit" value="Salvar" class="form__submit">
-                  </form>
+                    <form class="form__fieldset">
+                      <input type="text" class="form__name-input" placeholder="Nome" required>
+                      <input type="text" class="form__about-input" placeholder="Sobre mim" required>
+                      <input type="submit" value="Salvar" class="form__submit">
+                    </form>
                   </div>
                 </div>
+              </div>
             </div>
             <button class="profile__button">
               <img src="/images/vectoradd.svg" alt="Button Add Image" class="profile__button-add">
