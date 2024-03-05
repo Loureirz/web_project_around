@@ -12,3 +12,9 @@
   justify-content: flex-start;
   padding-bottom: 41px;
 }
+
+@media screen and (max-width: 720px) {
+  .header {
+    padding: 28px 20px 42px;
+  }
+}

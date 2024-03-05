@@ -69,3 +69,15 @@
 
 .profile__button-add {
 }
+
+@media screen and (max-width: 720px) {
+  .profile {
+    padding: 42px 19px 36px;
+    margin: 0 auto;
+  }
+
+  .profile__info {
+    padding: 22px 190px 22px 30px;
+    grid-template-columns: 250px 10px;
+  }
+}
