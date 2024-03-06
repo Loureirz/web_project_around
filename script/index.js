@@ -1,6 +1,6 @@
 const profileButton = document.querySelector('.profile__info-button');
 const formEdit = document.querySelector('.popup');
-const formOpen = document.querySelector('.popup__opened');
+const formOpen = document.querySelector('.popup-opened');
 const formClose = document.querySelector('.popup__close');
 
 const formElement = document.querySelector('.form__fieldset');
