@@ -1,0 +1,84 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay__open {
+  display: none;
+}
+
+.overlay__close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: -50px;
+  left: 425px;
+}
+
+.overlay__close:hover {
+    opacity: 50%;
+    transition: 0.4s;
+}
+
+.overlay__close-img {
+    width: 30px;
+    height: 30px;
+}
+
+.popupcard {
+  width: 430px;
+  height: 330px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 10px;
+  position: fixed;
+  top: 160px;
+  left: 425px;
+}
+
+.formcard__title {
+  font-family: "Inter Black";
+  font-size: 24px;
+  padding: 10px 64px 0 36px;
+  margin: 0;
+}
+
+.formcard__fieldset {
+
+}
+
+.formcard__title-input {
+  margin: 56px 36px 0 36px;
+  width: 358px;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.formcard__link-input {
+  margin: 30px 36px 0 36px;
+  width: 358px;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.formcard__submit {
+  width: 358px;
+  height: 46px;
+  background-color: #000;
+  color: #fff;
+  margin: 48px 36px 37px 36px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.formcard__submit:hover {
+  opacity: 80%;
+  transition: 0.4s;
+  cursor: pointer;
+}
