@@ -69,3 +69,72 @@ cardButton.addEventListener("click", function(){
 cardClose.addEventListener("click", function(){
   cardOpen.style.display = 'none';
 })
+
+//POPUP CARD - Add image//
+
+/*function renderCard(card) {
+  //recuperar o template,
+  const cardTemplate = document.querySelector('#template');
+  //criar um elemento a partir do template,
+  const cardElement = cardTemplate.content.cloneNode(true);
+  //adicionar informação no elemento,
+  const cardImage = cardElement.querySelector('.elements__card-image');
+  cardImage.src = card.link;
+  console.log(cardTemplate);
+  //recuperar a lista,
+  //adicionar o elemento na lista,
+}
+
+renderCard({
+  name: "Vale de Yosemite",
+  link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
+});*/
+
+function renderCard(card) {
+  const template = document
+    .querySelector("#template")
+    .content.querySelector(".elements__card");
+
+  const currentCard = template.cloneNode(true);
+
+  currentCard.querySelector(".elements__card-name").textContent = card.name;
+
+  currentCard
+    .querySelector(".elements__card-image")
+    .setAttribute("src", card.link);
+
+  currentCard
+    .querySelector(".elements__card-image")
+    .setAttribute("alt", card.name);
+
+  currentCard
+    .querySelector(".elements__delete-icon")
+    .addEventListener("click", (evt) => {
+      const elements = document.querySelector(".elements");
+      const card = evt.target.offsetParent;
+
+      elements.removeChild(card);
+    });
+
+  currentCard
+    .querySelector(".elements__like-icon")
+    .addEventListener("click", (evt) => {
+      if (evt.target.getAttribute("src") === "./images/like-button.png") {
+        return evt.target.setAttribute(
+          "src",
+          "./images/like-button-clicked.png"
+        );
+      }
+
+      return evt.target.setAttribute("src", "./images/like-button.png");
+    });
+
+  return currentCard;
+}
+
+const elements = document.querySelector(".elements");
+
+initialCards.forEach((card, index) => {
+  const cardItem = renderCard(card);
+  elements.append(cardItem);
+});
