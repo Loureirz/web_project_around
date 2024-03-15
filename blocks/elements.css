@@ -31,10 +31,11 @@
   max-width: 282px;
   max-height: 282px;
   border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }
 
 .elements__wrapper-text-and-like-button {
-  padding: 0 5px;
+  padding: 0 15px 0 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -45,6 +46,7 @@
 
 .elements__card-name {
   font-size: 24px;
+  font-family: "Inter Black";
   line-height: 29.05px;
   font-weight: 900;
   text-overflow: ellipsis;

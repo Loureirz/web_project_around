@@ -72,24 +72,6 @@ cardClose.addEventListener("click", function(){
 
 //POPUP CARD - Add image//
 
-/*function renderCard(card) {
-  //recuperar o template,
-  const cardTemplate = document.querySelector('#template');
-  //criar um elemento a partir do template,
-  const cardElement = cardTemplate.content.cloneNode(true);
-  //adicionar informação no elemento,
-  const cardImage = cardElement.querySelector('.elements__card-image');
-  cardImage.src = card.link;
-  console.log(cardTemplate);
-  //recuperar a lista,
-  //adicionar o elemento na lista,
-}
-
-renderCard({
-  name: "Vale de Yosemite",
-  link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
-});*/
-
 function renderCard(card) {
   const template = document
     .querySelector("#template")
@@ -108,6 +90,27 @@ function renderCard(card) {
     .setAttribute("alt", card.name);
 
   currentCard
+    .querySelector(".elements__card-image")
+    .addEventListener("click", (evt) => {
+      const zoomPopup = document.querySelector('.zoom__popup');
+      const zoomOpen = document.querySelector('.zoom__open');
+
+      const imageElement = document.querySelector('.zoom__popup-image');
+      const nameElement = document.querySelector('.zoom__popup-text');
+
+      imageElement.src = card.link;
+      nameElement.textContent = card.name;
+
+      zoomOpen.style.display = 'flex';
+
+      const zoomClose = document.querySelector('.zoom__close');
+
+      zoomClose.addEventListener("click", function(){
+        zoomOpen.style.display = 'none';
+      })
+    })
+
+  currentCard
     .querySelector(".elements__delete-icon")
     .addEventListener("click", (evt) => {
       const elements = document.querySelector(".elements");
@@ -119,14 +122,14 @@ function renderCard(card) {
   currentCard
     .querySelector(".elements__like-icon")
     .addEventListener("click", (evt) => {
-      if (evt.target.getAttribute("src") === "./images/like-button.png") {
+      if (evt.target.getAttribute("src") === "./images/heart.svg") {
         return evt.target.setAttribute(
           "src",
-          "./images/like-button-clicked.png"
+          "./images/like.svg"
         );
       }
 
-      return evt.target.setAttribute("src", "./images/like-button.png");
+      return evt.target.setAttribute("src", "./images/heart.svg");
     });
 
   return currentCard;
@@ -138,3 +141,27 @@ initialCards.forEach((card, index) => {
   const cardItem = renderCard(card);
   elements.append(cardItem);
 });
+
+const formAddCard = document.querySelector('.formcard__fieldset');
+formAddCard.addEventListener("submit", function(evt){
+  evt.preventDefault();
+  const inputTitle = formAddCard.querySelector('.formcard__title-input');
+  const inputImage = formAddCard.querySelector('.formcard__link-input');
+
+  const newCard = renderCard({
+    name: inputTitle.value,
+    link: inputImage.value,
+  });
+
+  document.querySelector(".elements").prepend(newCard);
+  formAddCard.reset();
+
+  cardOpen.style.display = 'none';
+})
+
+// POPUP ZOOM IMAGE //
+
+/*const zoomImage = document.querySelector(".elements__card-image");
+zoomImage.addEventListener("click", function(){
+
+})*/
