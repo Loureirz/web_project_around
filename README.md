@@ -21,3 +21,5 @@ Tecnologias usadas:
 Feito por Yuri Loureiro.
 
 GitHub Pages: https://loureirz.github.io/web_project_around/
+
+Adicionar imagens:
