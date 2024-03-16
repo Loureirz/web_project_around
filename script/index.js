@@ -59,7 +59,7 @@ formElement.addEventListener("submit", function(evt){
 //POPUP CARD - Open and Close//
 
 const cardButton = document.querySelector('.profile__button');
-const cardOpen = document.querySelector('.overlay__open');
+const cardOpen = document.querySelector('.overlay-open');
 const cardClose = document.querySelector('.overlay__close');
 
 cardButton.addEventListener("click", function(){
@@ -93,7 +93,7 @@ function renderCard(card) {
     .querySelector(".elements__card-image")
     .addEventListener("click", (evt) => {
       const zoomPopup = document.querySelector('.zoom__popup');
-      const zoomOpen = document.querySelector('.zoom__open');
+      const zoomOpen = document.querySelector('.zoom-open');
 
       const imageElement = document.querySelector('.zoom__popup-image');
       const nameElement = document.querySelector('.zoom__popup-text');
@@ -158,10 +158,3 @@ formAddCard.addEventListener("submit", function(evt){
 
   cardOpen.style.display = 'none';
 })
-
-// POPUP ZOOM IMAGE //
-
-/*const zoomImage = document.querySelector(".elements__card-image");
-zoomImage.addEventListener("click", function(){
-
-})*/
