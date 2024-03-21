@@ -1,11 +1,11 @@
 .popup {
-  position: absolute;
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
-  display: flex;
   width: 100%;
-  height: 100vw;
-  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
 
@@ -15,15 +15,14 @@
 }
 
 .popup__container {
-  width: 430px;
-  height: 330px;
-  background-color: #fff;
-  border: 1px solid #000;
+  width: 26.875rem;
+  height: 20.625rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 10px;
-  position: fixed;
-  top: 160px;
-  left: 425px;
-  justify-content: center;
+  background-color: #fff;
 }
 
 .popup__close-img {
