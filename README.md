@@ -29,14 +29,6 @@ Feito por Yuri Loureiro.
 Página Original:
 <img src="./images/readme/original.JPG">
 
-Versões Tablet:
-<img src="./images/readme/tablet.JPG">
-
-<img src="./images/readme/tablet2.JPG">
-
-Versão Mobile:
-<img src="./images/readme/mobile.JPG">
-
 Editada:
 <img src="./images/readme/editado.JPG">
 
