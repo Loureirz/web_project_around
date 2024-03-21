@@ -99,6 +99,7 @@ function renderCard(card) {
       const nameElement = document.querySelector('.zoom__popup-text');
 
       imageElement.src = card.link;
+      imageElement.alt = card.name;
       nameElement.textContent = card.name;
 
       zoomOpen.style.display = 'flex';

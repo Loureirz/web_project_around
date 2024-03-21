@@ -1,6 +1,6 @@
 .header {
-  max-width: 880px;
-  padding: 45px 200px 0 200px;
+  width: 880px;
+  margin: 45px auto 0;
 }
 
 .header__logo {
@@ -13,9 +13,36 @@
   padding-bottom: 41px;
 }
 
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 780px;
+    margin: 45px auto 0;
+  }
+
+  .header__logo {
+    width: 780px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    width: 680px;
+    margin: 45px auto 0;
+  }
+
+  .header__logo {
+    width: 680px;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .header {
-    padding: 28px 0 0;
+    width: 100%;
+    margin: 45px 0 0;
+  }
+
+  .header__logo {
+    width: 100%;
   }
 
   .header__logo-image {

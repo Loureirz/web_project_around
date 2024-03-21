@@ -11,6 +11,7 @@
 
 .popup-opened {
   display: none;
+  justify-content: center;
 }
 
 .popup__container {
@@ -22,6 +23,7 @@
   position: fixed;
   top: 160px;
   left: 425px;
+  justify-content: center;
 }
 
 .popup__close-img {
