@@ -61,6 +61,7 @@ formElement.addEventListener("submit", function(evt){
 const cardButton = document.querySelector('.profile__button');
 const cardOpen = document.querySelector('.overlay-open');
 const cardClose = document.querySelector('.overlay__close');
+const cardOut = document.querySelector('.overlay');
 
 cardButton.addEventListener("click", function(){
   cardOpen.style.display = 'flex';
