@@ -52,6 +52,7 @@
   border: 1px solid #fff;
   margin: 12px 0 0 0;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .profile__info-button:hover {
@@ -67,6 +68,7 @@
   margin-top: 30px;
   margin-right: 0;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .profile__button:hover {
