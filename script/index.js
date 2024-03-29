@@ -32,6 +32,7 @@ const profileButton = document.querySelector('.profile__info-button');
 const formEdit = document.querySelector('.popup');
 const formOpen = document.querySelector('.popup-opened');
 const formClose = document.querySelector('.popup__close');
+const formModal = document.querySelector('.popup__container');
 
 const formElement = document.querySelector('.form__fieldset');
 const nameInput = document.querySelector('.form__name-input');
@@ -45,6 +46,12 @@ profileButton.addEventListener("click", function(){
 
 formClose.addEventListener("click", function(){
   formOpen.style.display = 'none';
+});
+
+formEdit.addEventListener("click", function(e) {
+  if(e.target == formEdit) {
+    formOpen.style.display = 'none';
+  }
 })
 
 formElement.addEventListener("submit", function(evt){
@@ -65,11 +72,17 @@ const cardOut = document.querySelector('.overlay');
 
 cardButton.addEventListener("click", function(){
   cardOpen.style.display = 'flex';
-})
+});
 
 cardClose.addEventListener("click", function(){
   cardOpen.style.display = 'none';
-})
+});
+
+cardOut.addEventListener("click", function(e) {
+  if(e.target == cardOut) {
+    cardOpen.style.display = 'none';
+  }
+});
 
 //POPUP CARD - Add image//
 
@@ -162,10 +175,16 @@ formAddCard.addEventListener("submit", function(evt){
 })
 
 const zoomOpen = document.querySelector('.zoom-open');
+const zoom = document.querySelector('.zoom');
+
+zoom.addEventListener("click", function(e) {
+  if(e.target == zoom) {
+    zoomsOpen.style.display = 'none';
+  }
+});
 
 document.onkeydown = function (event) {
   if (event.key === "Escape") {
-
     formOpen.style.display = 'none';
     cardOpen.style.display = 'none';
     zoomOpen.style.display = 'none';

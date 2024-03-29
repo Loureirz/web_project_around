@@ -23,6 +23,7 @@
   transform: translate(-50%, -50%);
   border-radius: 10px;
   background-color: #fff;
+  z-index: 999;
 }
 
 .popup__close-img {
