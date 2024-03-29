@@ -160,3 +160,14 @@ formAddCard.addEventListener("submit", function(evt){
 
   cardOpen.style.display = 'none';
 })
+
+const zoomOpen = document.querySelector('.zoom-open');
+
+document.onkeydown = function (event) {
+  if (event.key === "Escape") {
+
+    formOpen.style.display = 'none';
+    cardOpen.style.display = 'none';
+    zoomOpen.style.display = 'none';
+  }
+};
