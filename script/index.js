@@ -179,7 +179,7 @@ const zoom = document.querySelector('.zoom');
 
 zoom.addEventListener("click", function(e) {
   if(e.target == zoom) {
-    zoomsOpen.style.display = 'none';
+    zoomOpen.style.display = 'none';
   }
 });
 
