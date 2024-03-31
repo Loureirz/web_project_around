@@ -11,7 +11,6 @@
 
 .popup-opened {
   display: none;
-  justify-content: center;
 }
 
 .popup__container {

@@ -68,6 +68,10 @@
   border-bottom: 1px solid #000;
 }
 
+.formcard__link-input:invalid {
+  border-bottom: 1px solid red;
+}
+
 .formcard__submit {
   width: 358px;
   height: 46px;

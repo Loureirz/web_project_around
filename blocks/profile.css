@@ -52,7 +52,7 @@
   border: 1px solid #fff;
   margin: 12px 0 0 0;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .profile__info-button:hover {

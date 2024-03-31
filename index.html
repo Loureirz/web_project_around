@@ -28,10 +28,10 @@
                   <div class="popup__container">
                     <button class="popup__close"><img src="./images/close.svg" alt="icone de fechar" class="popup__close-img"></button>
                     <h2 class="form__title">Editar Perfil</h2>
-                    <form class="form__fieldset">
-                      <input type="text" class="form__name-input" placeholder="Nome" value="Jacques Cousteau" minlength="2" maxlength="40" required>
-                      <input type="text" class="form__about-input" placeholder="Sobre mim" value="Explorador" minlength="2" maxlength="200" required>
-                      <input type="submit" value="Salvar" class="form__submit">
+                    <form id="form-profile" class="form__fieldset" novalidate>
+                      <input id="input-name" type="text" class="form__name-input" placeholder="Nome" value="Jacques Cousteau" minlength="2" maxlength="40" required>
+                      <input id="input-job" type="text" class="form__about-input" placeholder="Sobre mim" value="Explorador" minlength="2" maxlength="200" required>
+                      <input id="save-btn" type="submit" value="Salvar" class="form__submit" disabled>
                     </form>
                   </div>
                 </div>
@@ -44,9 +44,9 @@
                 <div class="popupcard formcard">
                   <button class="overlay__close"><img src="./images/close.svg" alt="icone de fechar" class="overlay__close-img"></button>
                   <h2 class="formcard-title">Novo Local</h2>
-                    <form class="formcard__fieldset">
+                    <form class="formcard__fieldset" novalidate>
                       <input type="text" class="formcard__title-input" placeholder="Titulo" value="" required>
-                      <input type="text" class="formcard__link-input" placeholder="Link da imagem" value="" required>
+                      <input type="url" class="formcard__link-input" placeholder="Link da imagem" value="" required>
                       <input type="submit" value="Criar" class="formcard__submit">
                     </form>
                 </div>

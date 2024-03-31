@@ -1,5 +1,9 @@
+function enableValidation(config) {
+
+};
+
 enableValidation({
-  formSelector: ".popup__form",
+  formSelector: "form-profile",
   inputSelector: ".popup__input",
   submitButtonSelector: ".popup__button",
   inactiveButtonClass: "popup__button_disabled",
