@@ -1,3 +1,4 @@
+import { enableValidation } from './validate.js';
 //INITIAL CARDS//
 const initialCards = [
   {
@@ -35,8 +36,8 @@ const formClose = document.querySelector('.popup__close');
 const formModal = document.querySelector('.popup__container');
 
 const formElement = document.querySelector('.form__fieldset');
-const nameInput = document.querySelector('.form__name-input');
-const jobInput = document.querySelector('.form__about-input');
+const nameInput = document.querySelector('.form__input-name');
+const jobInput = document.querySelector('.form__input-job');
 const nameProfile = document.querySelector('.profile__info-name');
 const jobProfile = document.querySelector('.profile__info-text');
 
@@ -160,8 +161,8 @@ initialCards.forEach((card, index) => {
 const formAddCard = document.querySelector('.formcard__fieldset');
 formAddCard.addEventListener("submit", function(evt){
   evt.preventDefault();
-  const inputTitle = formAddCard.querySelector('.formcard__title-input');
-  const inputImage = formAddCard.querySelector('.formcard__link-input');
+  const inputTitle = formAddCard.querySelector('.formcard__input-title');
+  const inputImage = formAddCard.querySelector('.formcard__input-link');
 
   const newCard = renderCard({
     name: inputTitle.value,
@@ -190,3 +191,21 @@ document.onkeydown = function (event) {
     zoomOpen.style.display = 'none';
   }
 };
+
+enableValidation({
+  formSelector: ".form__fieldset",
+  inputSelectorOne: ".form__input-name",
+  inputSelectorTwo: ".form__input-job",
+  submitButtonSelector: ".form__submit",
+  errorClassOne: ".form__input-name-error",
+  errorClassTwo: ".form__input-job-error",
+});
+
+enableValidation({
+  formSelector: ".formcard__fieldset",
+  inputSelectorOne: ".formcard__input-title",
+  inputSelectorTwo: ".formcard__input-link",
+  submitButtonSelector: ".formcard__submit",
+  errorClassOne: ".formcard__input-title-error",
+  errorClassTwo: ".formcard__input-link-error",
+});

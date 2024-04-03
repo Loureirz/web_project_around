@@ -28,10 +28,12 @@
                   <div class="popup__container">
                     <button class="popup__close"><img src="./images/close.svg" alt="icone de fechar" class="popup__close-img"></button>
                     <h2 class="form__title">Editar Perfil</h2>
-                    <form id="form-profile" class="form__fieldset" novalidate>
-                      <input id="input-name" type="text" class="form__name-input" placeholder="Nome" value="Jacques Cousteau" minlength="2" maxlength="40" required>
-                      <input id="input-job" type="text" class="form__about-input" placeholder="Sobre mim" value="Explorador" minlength="2" maxlength="200" required>
-                      <input id="save-btn" type="submit" value="Salvar" class="form__submit" disabled>
+                    <form class="form__fieldset" novalidate>
+                      <input type="text" class="form__input-name" placeholder="Nome" value="Jacques Cousteau" minlength="2" maxlength="40" required>
+                      <p class="form__input-name-error"></p>
+                      <input type="text" class="form__input-job" placeholder="Sobre mim" value="Explorador" minlength="2" maxlength="200" required>
+                      <p class="form__input-job-error"></p>
+                      <input type="submit" value="Salvar" class="form__submit">
                     </form>
                   </div>
                 </div>
@@ -45,8 +47,10 @@
                   <button class="overlay__close"><img src="./images/close.svg" alt="icone de fechar" class="overlay__close-img"></button>
                   <h2 class="formcard-title">Novo Local</h2>
                     <form class="formcard__fieldset" novalidate>
-                      <input type="text" class="formcard__title-input" placeholder="Titulo" value="" required>
-                      <input type="url" class="formcard__link-input" placeholder="Link da imagem" value="" required>
+                      <input type="text" class="formcard__input-title" placeholder="Titulo" value="" minlength="2" maxlength="30" required>
+                      <p class="formcard__input-title-error"></p>
+                      <input id="link-image" type="url" class="formcard__input-link" placeholder="Link da imagem" value="" required>
+                      <p class="formcard__input-link-error"></p>
                       <input type="submit" value="Criar" class="formcard__submit">
                     </form>
                 </div>
@@ -87,6 +91,7 @@
         </main>
         <footer class="footer">&copy;2024 Around The U.S.</footer>
     </div>
-    <script src="./script/index.js"></script>
+    <script type="module" src="./script/index.js"></script>
+    <script type="module" src="./script/validate.js"></script>
 </body>
 </html>
