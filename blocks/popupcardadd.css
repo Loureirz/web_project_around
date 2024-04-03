@@ -131,13 +131,13 @@
     margin: 0;
   }
 
-  .formcard__title-input {
-    margin: 56px 20px 0 20px;
+  .formcard__input-title {
+    margin: 30px 20px 0 20px;
     width: 238px;
   }
 
-  .formcard__link-input {
-    margin: 30px 20px 0 20px;
+  .formcard__input-link {
+    margin: 25px 20px 0 20px;
     width: 238px;
   }
 
@@ -145,7 +145,7 @@
     width: 238px;
     height: 46px;
     padding: 0;
-    margin: 46px 22px 25px 22px;
+    margin: 40px 22px 25px 22px;
     border-radius: 5px;
   }
 }
