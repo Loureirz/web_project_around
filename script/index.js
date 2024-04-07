@@ -1,5 +1,7 @@
 import { enableValidation } from './validate.js';
+
 //INITIAL CARDS//
+
 const initialCards = [
   {
     name: "Vale de Yosemite",
@@ -184,13 +186,15 @@ zoom.addEventListener("click", function(e) {
   }
 });
 
-document.onkeydown = function (event) {
+function escEventListener(event) {
   if (event.key === "Escape") {
     formOpen.style.display = 'none';
     cardOpen.style.display = 'none';
     zoomOpen.style.display = 'none';
   }
-};
+}
+
+document.addEventListener('keydown', escEventListener);
 
 enableValidation({
   formSelector: ".form__fieldset",
