@@ -20,12 +20,12 @@ export default class Card {
       this._likeButton(evt);
     })
 
-    this._element.querySelector(".elements__card-image").addEventListener("click", () => {
+    /*this._element.querySelector(".elements__card-image").addEventListener("click", () => {
       this._showZoomPopup();
-    })
+    })*/
 }
 
-  _showZoomPopup() {
+  /*_showZoomPopup() {
     const zoomOpen = document.querySelector('.zoom-open');
     const zoomClose = document.querySelector('.zoom__close-img');
     const imageElement = document.querySelector('.zoom__popup-image');
@@ -42,7 +42,7 @@ export default class Card {
         zoomOpen.style.display = 'none';
       }
     })
-  }
+  }*/
 
   _deleteCard() {
     const elements = document.querySelector(".elements");

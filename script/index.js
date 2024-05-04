@@ -1,5 +1,7 @@
 import FormValidator from './FormValidator.js';
 import Card from './card.js';
+import { Section } from './section.js';
+import { PopupWithImage } from './PopupWithImage.js';
 
 //INITIAL CARDS//
 
@@ -58,15 +60,21 @@ formElement.addEventListener("submit", function(evt){
   formOpen.style.display = 'none';
 })
 
+const popupImg = new PopupWithImage(".zoom__popup-image", ".zoom__popup-text", ".zoom");
+
 // Gerador de cards //
 
-const elements = document.querySelector(".elements");
-
-initialCards.forEach((card) => {
-  const cardInstance = new Card(card, document.querySelector("#template"));
-  const generatedCard = cardInstance.generateCard();
-  elements.append(generatedCard);
-});
+const section = new Section ({
+  items: initialCards,
+  renderer: (item) => {
+  const card = new Card(item, document.querySelector("#template"), (image, title) => {
+    popupImg.open(image, title);
+    popupImg.setEventListeners();
+  });
+  return card.generateCard();
+  },
+}, ".elements");
+section.renderItems();
 
 const formAddCard = document.querySelector('.formcard__fieldset');
 

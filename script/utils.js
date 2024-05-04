@@ -34,15 +34,32 @@ formEdit.addEventListener("click", function(e) {
 
 // POPUP CARD //
 
-cardButton.addEventListener("click", function(){
+/*cardButton.addEventListener("click", function(){
   cardOpen.style.display = 'flex';
 });
 
-cardClose.addEventListener("click", function(){
+formClose.addEventListener("click", function(){
   cardOpen.style.display = 'none';
 });
 
 cardOut.addEventListener("click", function(e) {
+  if(e.target == cardOut) {
+    cardOpen.style.display = 'none';
+  }
+});*/
+
+cardButton.addEventListener("click", function(){
+  console.log("Botão de card clicado");
+  cardOpen.style.display = 'flex';
+});
+
+formClose.addEventListener("click", function(){
+  console.log("Botão de fechar clicado");
+  cardOpen.style.display = 'none';
+});
+
+cardOut.addEventListener("click", function(e) {
+  console.log("Área externa do card clicada");
   if(e.target == cardOut) {
     cardOpen.style.display = 'none';
   }
@@ -58,7 +75,7 @@ zoom.addEventListener("click", function(e) {
 
 // ESC key
 
-function escEventListener(event) {
+/*function escEventListener(event) {
   if (event.key === "Escape") {
     formOpen.style.display = 'none';
     cardOpen.style.display = 'none';
@@ -66,4 +83,4 @@ function escEventListener(event) {
   }
 }
 
-document.addEventListener('keydown', escEventListener);
+document.addEventListener('keydown', escEventListener);*/
