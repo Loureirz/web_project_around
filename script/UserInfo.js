@@ -10,6 +10,7 @@ export class UserInfo {
       }
   }
   setUserInfo(name, job) {
+    console.log("Valores recebidos em setUserInfo:", name, job);
       this._nameElement.textContent = name
       this._jobElement.textContent = job
   }

@@ -13,20 +13,10 @@ export class PopupWithForm extends Popup {
       const values = {};
 
       inputs.forEach(input => {
-          values[input.name] = input.value;
+          values[input] = input.value;
       });
       console.log(values);
       return values;
-
-      /*const title = this._formElement.querySelector(".formcard__input-title").value;
-      const link = this._formElement.querySelector(".formcard__input-link").value;
-
-      const newCard = {
-        title,
-        link
-      }
-
-      return newCard;*/
   }
 
     setEventListeners(){

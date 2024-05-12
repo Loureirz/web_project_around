@@ -64,6 +64,8 @@ new FormValidator(configFormValidade, formCard).enableValidation();
 const infoUser = new UserInfo(".profile__info-name", ".profile__info-text");
 
 const popupInfoUser = new PopupWithForm("#popup-user", ({name, job}) => {
+  console.log("Name:", name);
+  console.log("Job:", job);
   infoUser.setUserInfo(name, job)
 },
   ".form__fieldset"
