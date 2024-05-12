@@ -1,4 +1,5 @@
 .zoom {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +11,7 @@
 }
 
 .zoom-open {
-  display: none;
+  display: flex;
 }
 
 .zoom__popup {

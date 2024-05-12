@@ -1,8 +1,9 @@
 export default class Card {
-  constructor(data, dataTemplate){
+  constructor(data, dataTemplate, hadleImagePopup){
     this._name = data.name;
     this._link = data.link;
     this._dataTemplate = dataTemplate;
+    this._hadleImagePopup = hadleImagePopup
   }
 
   _getTemplate(){
@@ -20,29 +21,10 @@ export default class Card {
       this._likeButton(evt);
     })
 
-    /*this._element.querySelector(".elements__card-image").addEventListener("click", () => {
-      this._showZoomPopup();
-    })*/
-}
-
-  /*_showZoomPopup() {
-    const zoomOpen = document.querySelector('.zoom-open');
-    const zoomClose = document.querySelector('.zoom__close-img');
-    const imageElement = document.querySelector('.zoom__popup-image');
-    const nameElement = document.querySelector('.zoom__popup-text');
-
-    imageElement.src = this._link;
-    imageElement.alt = this._name;
-    nameElement.textContent = this._name;
-
-    zoomOpen.style.display = 'flex';
-
-    zoomClose.addEventListener("click", (e) => {
-        if (e.target == zoomClose) {
-        zoomOpen.style.display = 'none';
-      }
+    this._element.querySelector(".elements__card-image").addEventListener("click", () => {
+      this._hadleImagePopup(this._link ,this._name )
     })
-  }*/
+}
 
   _deleteCard() {
     const elements = document.querySelector(".elements");

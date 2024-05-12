@@ -9,6 +9,10 @@ export class Section {
     this._items.forEach((item) => this.addItem(item));
   }
 
+  addElement(element){
+    this._list.prepend(element);
+  }
+
   addItem(data){
     const element = this._renderer(data);
     this._list.append(element);

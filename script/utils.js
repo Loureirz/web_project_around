@@ -1,36 +1,35 @@
 import {
   profileButton,
-  formEdit,
   formOpen,
-  formClose,
+  /*formClose,*/
   formElement,
   nameInput,
   jobInput,
   nameProfile,
   jobProfile,
-  cardButton,
+  /*cardButton,
   cardOpen,
   cardClose,
-  cardOut,
+  cardOut,*/
   zoomOpen,
   zoom,
-} from './index.js';
+} from '../src/index.js';
 
 // POPUP PROFILE //
+// profileButton.addEventListener("click", function(){
+//   console.log(formEdit)
+//   formEdit.classList.add("popup-opened")
+// });
 
-profileButton.addEventListener("click", function(){
-  formOpen.style.display = 'flex';
-});
+// formClose.addEventListener("click", function(){
+//   formOpen.classList.remove("popup-opened")
+// });
 
-formClose.addEventListener("click", function(){
-  formOpen.style.display = 'none';
-});
-
-formEdit.addEventListener("click", function(e) {
-  if(e.target == formEdit) {
-    formOpen.style.display = 'none';
-  }
-});
+// formEdit.addEventListener("click", function(e) {
+//   if(e.target == formEdit) {
+//     formOpen.classList.remove("popup-opened")
+//   }
+// });
 
 // POPUP CARD //
 
@@ -48,7 +47,7 @@ cardOut.addEventListener("click", function(e) {
   }
 });*/
 
-cardButton.addEventListener("click", function(){
+/*cardButton.addEventListener("click", function(){
   console.log("Botão de card clicado");
   cardOpen.style.display = 'flex';
 });
@@ -63,15 +62,15 @@ cardOut.addEventListener("click", function(e) {
   if(e.target == cardOut) {
     cardOpen.style.display = 'none';
   }
-});
+});*/
 
 // POPUP ZOOM //
 
-zoom.addEventListener("click", function(e) {
+/*zoom.addEventListener("click", function(e) {
   if(e.target == zoom) {
     zoomOpen.style.display = 'none';
   }
-});
+});*/
 
 // ESC key
 

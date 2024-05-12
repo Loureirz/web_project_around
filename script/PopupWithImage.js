@@ -13,17 +13,20 @@ export class PopupWithImage extends Popup {
   }
 
   open(image, name){
-    const imageElement = document.querySelector('.zoom__popup-image');
-    const nameElement = document.querySelector('.zoom__popup-text');
-
-    imageElement.src = image;
-    imageElement.alt = name;
-    nameElement.textContent = name;
+    this._imageSelector.src = image;
+    this._imageSelector.alt = name;
+    this._titleSelector.textContent = name;
     super.open();
   }
 
   setEventListeners(){
-    const closeZoom = this._popup.querySelector(".zoom__close");
+    const closeZoom = this._popup.querySelector(".popup__close");
+    console.log(closeZoom)
     closeZoom.addEventListener("click", () => this.close());
+    this._popup.firstElementChild.addEventListener("click", () => {
+
+      this.close()
+
+    });
   }
 }
