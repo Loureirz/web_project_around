@@ -21,7 +21,6 @@ export class PopupWithImage extends Popup {
 
   setEventListeners(){
     const closeZoom = this._popup.querySelector(".popup__close");
-    console.log(closeZoom)
     closeZoom.addEventListener("click", () => this.close());
     this._popup.firstElementChild.addEventListener("click", () => {
 

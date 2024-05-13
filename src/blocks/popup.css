@@ -24,6 +24,15 @@
   z-index: 999;
 }
 
+.popup__zoom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  margin: 0;
+}
+
 .popup__close-img {
   width: 30px;
   height: 30px;
@@ -34,7 +43,7 @@
   border: none;
   cursor: pointer;
   position: relative;
-  top: -70px;
+  top: -40px;
   left: 425px;
 }
 
@@ -44,7 +53,7 @@
 }
 
 .form__title {
-  font-family: "Inter Black";
+  font-family: "Inter", sans-serif;
   font-size: 24px;
   padding: 10px 64px 15px 36px;
   margin: 0;

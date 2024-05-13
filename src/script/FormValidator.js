@@ -63,10 +63,10 @@ export default class FormValidator {
   enableValidation() {
     this._inputList.forEach((input) => {
       input.addEventListener('input', () => {
-        this._buttonState();
+        this._handleInputChange();
       });
     });
     this._setEventListeners();
+    this._buttonState();
   }
 }
-

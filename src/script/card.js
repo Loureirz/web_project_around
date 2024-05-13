@@ -1,6 +1,9 @@
+import likedImage from "../image/like.svg";
+import heartImage from "../image/heart.svg";
+
 export default class Card {
   constructor(data, dataTemplate, hadleImagePopup){
-    this._name = data.name;
+    this._name = data.title;
     this._link = data.link;
     this._dataTemplate = dataTemplate;
     this._hadleImagePopup = hadleImagePopup
@@ -36,10 +39,10 @@ export default class Card {
     const target = evt.target;
     const currentSrc = target.getAttribute("src");
 
-    if (currentSrc.includes('heart.svg')) {
-      target.setAttribute("src", '../images/like.svg');
-    } else if (currentSrc.includes('like.svg')) {
-      target.setAttribute("src", '../images/heart.svg');
+    if (currentSrc === heartImage) {
+      target.setAttribute("src", likedImage);
+    } else if (currentSrc === likedImage) {
+      target.setAttribute("src", heartImage);
     }
   }
 
