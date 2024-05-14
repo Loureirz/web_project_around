@@ -49,8 +49,8 @@ profileButton.addEventListener("click", () => {
 popupInfoUser.setEventListeners();
 
 const popupImg = new PopupWithImage(
-  ".zoom__popup-image",
-   ".zoom__popup-text",
+  ".popup__zoom-image",
+   ".popup__zoom-text",
     ".popup_image");
 
 // Gerador de cards //

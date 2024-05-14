@@ -9,18 +9,7 @@
   z-index: 2;
 }
 
-.zoom-open {
-  display: flex;
-}
-
-.zoom__popup {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  z-index: 999;
-}
-
-.zoom__popup-image {
+.popup__zoom-image {
   max-width: 75vw;
   max-height: 75vh;
   display: flex;
@@ -28,7 +17,7 @@
   align-items: center;
 }
 
-.zoom__popup-text {
+.popup__zoom-text {
   font-size: 12px;
   color: #fff;
 }
