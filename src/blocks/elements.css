@@ -18,14 +18,42 @@
   position: relative;
 }
 
-.elements__delete-icon {
+/*.elements__delete-icon {
   position: absolute;
   top: 18px;
   right: 15px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.elements__delete-icon-hidden {
+  visibility: visible;
+  opacity: 1;
 }
 
 .elements__delete-icon:hover {
   opacity: 60%;
+  transition: 0.4s;
+}*/
+
+.elements__delete-button {
+  padding: 18px;
+  align-self: last baseline;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.elements__delete-button-hidden {
+  visibility: visible;
+  opacity: 1;
+}
+
+.elements__delete-button-hidden:hover {
   transition: 0.4s;
 }
 
@@ -58,7 +86,7 @@
   overflow: hidden;
 }
 
-.elements__like-button,
+/*.elements__like-button,
 .elements__delete-button {
   background-color: transparent;
   border: none;
@@ -68,12 +96,43 @@
 .elements__like-icon {
   width: 21px;
   height: 19px;
+}*/
+
+.elements__like-button {
+  display: inline-block;
+  align-self: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: url(../image/heart.svg) center no-repeat;
+  width: 21px;
+  height: 19px;
+  background-size: 100%;
+  transition: 0.3s;
+}
+
+.elements__like-button_press {
+  display: inline-block;
+  align-self: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 21px;
+  height: 19px;
+  background-size: 100%;
+  background: url(../image/like.svg) center no-repeat;
 }
 
 .elements__like-icon:hover {
   opacity: 60%;
   cursor: pointer;
   transition: 0.2s;
+}
+
+.elements__like-counter {
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 @media screen and (max-width: 1024px) {

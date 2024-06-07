@@ -41,3 +41,5 @@ export const Overlay = document.querySelector('.overlay');
 export const zoomOpen = document.querySelector('.zoom-open');
 export const zoom = document.querySelector('.popup_image');
 export const formCard = document.querySelector('.formcard__fieldset');
+export const formAvatar = document.querySelector('.popup__avatar-form');
+export const openEditAvatar = document.querySelector('.profile__image-edit');

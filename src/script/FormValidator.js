@@ -35,8 +35,16 @@ export default class FormValidator {
     const errorElementOne = this._formElement.querySelector(this._config.errorClassOne);
     const errorElementTwo = this._formElement.querySelector(this._config.errorClassTwo);
 
-    const isInputOneValid = this._checkInputLength(inputOne, errorElementOne);
-    const isInputTwoValid = this._checkInputLength(inputTwo, errorElementTwo) && this._checkInputValidity(inputTwo, errorElementTwo);
+    let isInputOneValid = true;
+    let isInputTwoValid = true;
+
+    if (inputOne && errorElementOne) {
+      isInputOneValid = this._checkInputLength(inputOne, errorElementOne);
+    }
+
+    if (inputTwo && errorElementTwo) {
+      isInputTwoValid = this._checkInputLength(inputTwo, errorElementTwo) && this._checkInputValidity(inputTwo, errorElementTwo);
+    }
 
     submitButton.disabled = !(isInputOneValid && isInputTwoValid);
   }
@@ -56,8 +64,8 @@ export default class FormValidator {
   _setEventListeners() {
     const inputOne = this._formElement.querySelector(this._config.inputSelectorOne);
     const inputTwo = this._formElement.querySelector(this._config.inputSelectorTwo);
-    inputOne.addEventListener("input", this._handleInputChange());
-    inputTwo.addEventListener("input", this._handleInputChange());
+    inputOne ? inputOne.addEventListener("input", this._handleInputChange()) : null;
+    inputTwo ? inputTwo.addEventListener("input", this._handleInputChange()) : null;
   }
 
   enableValidation() {

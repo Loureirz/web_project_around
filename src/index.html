@@ -17,7 +17,9 @@
     </header>
     <main class="main">
       <section class="profile">
-        <img src="<%= require('./image/image.jpg')%>" alt="Foto Profile" class="profile__image">
+        <button type="submit" class="profile__image-edit">
+          <img src="<%= require('./image/image.jpg')%>" alt="Foto Profile" class="profile__image">
+        </button>
         <div class="profile__info">
           <h4 class="profile__info-name">Jacques Cousteau</h4>
           <button class="profile__info-button">
@@ -42,10 +44,32 @@
               <input name="name" type="text" class="form__input-name"  minlength="2"
                 maxlength="40" required>
               <p class="form__input-name-error"></p>
-              <input name="job" type="text" class="form__input-job"   minlength="2"
+              <input name="about" type="text" class="form__input-job"   minlength="2"
                 maxlength="200" required>
               <p class="form__input-job-error"></p>
               <button type="submit"  class="form__submit">Salvar</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- popup do avatar -->
+
+        <div class="popup" id="popup-avatar">
+          <div class="overlay"></div>
+          <div class="popup__avatar">
+            <button class="popup__close"><img src="<%= require('./image/close.svg')%>" alt="icone de fechar" class="popup__close-img"></button>
+            <h2 class="popup__avatar-title">Alterar a Foto do Perfil</h2>
+            <form class="popup__avatar-form" novalidate>
+              <input
+                class="formavatar__input-link"
+                id="avatar"
+                placeholder="Link da Imagem"
+                type="url"
+                name="image"
+                required
+              />
+              <p class="formavatar__input-link-error"></p>
+              <button class="formavatar__submit" type="submit">Salvar</button>
             </form>
           </div>
         </div>
@@ -57,7 +81,7 @@
             <button class="popup__close"><img src="<%= require('./image/close.svg')%>" alt="icone de fechar" class="popup__close-img"></button>
             <h2 class="formcard__title">Novo Local</h2>
             <form class="formcard__fieldset" novalidate>
-              <input type="text" class="formcard__input-title" name="title"  minlength="2"
+              <input type="text" class="formcard__input-title" name="name"  minlength="2"
                 maxlength="30" required>
               <p class="formcard__input-title-error"></p>
               <input id="link-image" type="url" class="formcard__input-link" name="link"
@@ -77,6 +101,16 @@
             <p class="popup__zoom-text"></p>
          </div>
         </div>
+
+        <div class="popup popup__confirm" id="popup-confirm">
+          <div class="overlay"></div>
+          <div class="popup__confirm-element" >
+            <button class="popup__close"><img src="<%= require('./image/close.svg')%>" alt="icone de fechar" class="popup__close-img"></button>
+            <h2 class="popup__confirm-text">Tem certeza?</h2>
+            <button type="submit" class="popup__confirm-btn" id="popup-confirm">Sim</button>
+          </div>
+          <div>
+        </div>
       </section>
       <div class="elements">
         <template id="template">
@@ -87,9 +121,12 @@
             <img class="elements__card-image" src="#" alt="" />
             <div class="elements__wrapper-text-and-like-button">
               <p class="elements__card-name"></p>
+              <div class="elements__like">
               <button type="button" class="elements__like-button">
-                <img class="elements__like-icon" src="<%= require('./image/heart.svg')%>" alt="like button icon" />
+                <!-- <img class="elements__like-icon" src="<%= require('./image/heart.svg')%>" alt="like button icon" /> -->
               </button>
+              <p class="elements__like-counter"></p>
+              </div>
             </div>
           </div>
         </template>

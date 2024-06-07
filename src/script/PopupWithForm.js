@@ -18,6 +18,12 @@ export class PopupWithForm extends Popup {
     return values;
   }
 
+  _loading(isLoading) {
+    if(isLoading) {
+      this._submitCallBack.textContent = "Salvando...";
+    }
+  }
+
   setEventListeners() {
     super.setEventListeners();
     this._formElement.addEventListener("submit", (evt) => {
@@ -25,6 +31,7 @@ export class PopupWithForm extends Popup {
 
       const valores = this._getInputValues();
       this._submitCallBack(valores);
+      this._loading(true);
       this.close();
       this.reset();
     });
