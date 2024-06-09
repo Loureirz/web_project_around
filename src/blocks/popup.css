@@ -52,7 +52,7 @@
   transition: 0.4s;
 }
 
-.popup__confirm-element {
+.popup-confirm__element {
   width: 430px;
   height: 181px;
   position: absolute;
@@ -63,14 +63,14 @@
   background-color: #fff;
 }
 
-.popup__confirm-text {
+.popup-confirm__text {
   margin: 0 36px 38px 36px;
   font-size: 24px;
   font-family: "Inter";
   font-weight: bold;
 }
 
-.popup__confirm-btn {
+.popup-confirm__btn {
   width: 358px;
   height: 46px;
   background-color: #000;
@@ -80,7 +80,7 @@
   cursor: pointer;
 }
 
-.popup__confirm-btn:hover {
+.popup-confirm__btn:hover {
   opacity: 80%;
   transition: 0.4s;
   cursor: pointer;

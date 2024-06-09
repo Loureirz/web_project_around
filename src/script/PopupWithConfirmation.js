@@ -13,7 +13,7 @@ export class PopupWithConfirmation extends Popup {
 
   setEventListeners(){
     super.setEventListeners();
-    const deleteConfirm = document.querySelector(".popup__confirm-btn");
+    const deleteConfirm = document.querySelector(".popup-confirm__btn");
 
     deleteConfirm.addEventListener("click", (evt) => {
       evt.preventDefault();

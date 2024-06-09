@@ -95,7 +95,7 @@ popupInfoUser.setEventListeners();
 
 const avatarEdit = new PopupWithForm("#popup-avatar", ({image}) => {
   api.editAvatar({
-    avatar: document.querySelector(".formavatar__input-link").value,
+    avatar: document.querySelector(".popup__avatar-input").value,
   });
   const { name, about } = infoUser.getUserInfo();
   infoUser.setUserInfo(name, about, image);
