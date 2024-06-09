@@ -207,7 +207,7 @@
   margin: 0px 64px 30px 36px;
 }
 
-.formavatar__input-link {
+.popup__avatar-input {
   margin: 5px 30px 0 36px;
   padding: 5px 3px 5px 3px;
   width: 350px;
@@ -216,11 +216,11 @@
   outline: 0;
 }
 
-.formavatar__input-link:invalid {
+.popup__avatar-input:invalid {
   border-bottom: 1px solid red;
 }
 
-.formavatar__input-link-error {
+.popup__avatar-input__error {
   color: #FF0000;
   height: 15px;
   font-size: 12px;
@@ -229,7 +229,7 @@
   margin: 5px 30px 0 36px;
 }
 
-.formavatar__submit {
+.popup__avatar-submit {
   width: 358px;
   height: 46px;
   background-color: #000;
@@ -239,12 +239,12 @@
   cursor: pointer;
 }
 
-.formavatar__submit:disabled{
+.popup__avatar-submit:disabled{
   color: grey;
   background-color: #fff;
 }
 
-.formavatar__submit:hover {
+.popup__avatar-submit:hover {
   opacity: 80%;
   transition: 0.4s;
   cursor: pointer;
