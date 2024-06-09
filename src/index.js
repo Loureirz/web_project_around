@@ -32,7 +32,7 @@ const api = new Api({
 
 const configUserValidate = { inputSelectorOne: ".form__input-name", inputSelectorTwo: ".form__input-job", submitButtonSelector: ".form__submit", errorClassOne: ".form__input-name-error", errorClassTwo: ".form__input-job-error" }
 const configFormValidade = { inputSelectorOne: ".formcard__input-title", inputSelectorTwo: ".formcard__input-link", submitButtonSelector: ".formcard__submit", errorClassOne: ".formcard__input-title-error", errorClassTwo: ".formcard__input-link-error" }
-const configAvatarValidade = { inputSelectorTwo: ".popup__avatar-input", submitButtonSelector: ".popup__avatar-submit", errorClassTwo: ".popup__avatar-input__error" }
+const configAvatarValidade = { inputSelectorTwo: ".popup__avatar-input", submitButtonSelector: ".popup__avatar-submit", errorClassTwo: ".popup__avatar-input-error" }
 
 new FormValidator(configUserValidate, formElement).enableValidation();
 new FormValidator(configFormValidade, formCard).enableValidation();
