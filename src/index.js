@@ -79,13 +79,6 @@ const popupInfoUser = new PopupWithForm("#popup-user", ({name, about}) => {
 );
 
 profileButton.addEventListener("click", () => {
-
-  const infoUser = new UserInfo(".profile__info-name", ".profile__info-text");
-  const { name, job } = infoUser.getUserInfo();
-
-  nameInput.value = name;
-  jobInput.value = job;
-
   popupInfoUser.open();
 })
 
@@ -97,8 +90,8 @@ const avatarEdit = new PopupWithForm("#popup-avatar", ({image}) => {
   api.editAvatar({
     avatar: document.querySelector(".popup__avatar-input").value,
   });
-  const { name, about } = infoUser.getUserInfo();
-  infoUser.setUserInfo(name, about, image);
+  const { name, job } = infoUser.getUserInfo();
+  infoUser.setUserInfo(name, job, image);
 },
   ".popup__avatar-form"
 );
